@@ -27,4 +27,5 @@ public interface IGenericRepository<TDto,TDb> where TDto: class where TDb: class
     void RemoveRange(IEnumerable<TDto> entities);
     void Update(TDto entityToUpdate);
     void BulkUpdate(IEnumerable<TDto> entitiesToUpdate);
+    // some modification
 }
