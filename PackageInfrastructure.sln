@@ -8,6 +8,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{476F6A4C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitOfWorkPackages", "UnitOfWorkPackages", "{421B83B9-6346-4624-8E0F-6AD6F6C18D47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWorkRepository", "src\UnitOfWorkPackages\UnitOfWorkRepository\UnitOfWorkRepository.csproj", "{A57EF77C-E385-48C1-8474-3DE9451F276D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitOfWorkRepository.Contract", "src\UnitOfWorkPackages\UnitOfWorkRepository.Contract\UnitOfWorkRepository.Contract.csproj", "{0425B62C-0DBD-41BB-B337-6AA70FE5EDA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,5 +19,17 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{421B83B9-6346-4624-8E0F-6AD6F6C18D47} = {8F0135DD-4516-4FDF-8A7A-58BA91F117AF}
+		{A57EF77C-E385-48C1-8474-3DE9451F276D} = {421B83B9-6346-4624-8E0F-6AD6F6C18D47}
+		{0425B62C-0DBD-41BB-B337-6AA70FE5EDA5} = {421B83B9-6346-4624-8E0F-6AD6F6C18D47}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A57EF77C-E385-48C1-8474-3DE9451F276D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57EF77C-E385-48C1-8474-3DE9451F276D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57EF77C-E385-48C1-8474-3DE9451F276D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57EF77C-E385-48C1-8474-3DE9451F276D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0425B62C-0DBD-41BB-B337-6AA70FE5EDA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0425B62C-0DBD-41BB-B337-6AA70FE5EDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0425B62C-0DBD-41BB-B337-6AA70FE5EDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0425B62C-0DBD-41BB-B337-6AA70FE5EDA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
