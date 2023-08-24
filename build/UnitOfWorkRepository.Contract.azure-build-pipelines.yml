@@ -10,6 +10,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   projectFileLocation: 'src/UnitOfWorkPackages\UnitOfWorkRepository.Contract'
+  feedGuid: '0def8815-55c0-4e3f-af1d-492e533bae39/75f55f57-2fac-448f-9e08-303cb4356731'
 
 steps:
 
@@ -17,7 +18,7 @@ steps:
     inputs:
       command: 'restore'
       feedsToUse: 'select'
-      vstsFeed: '0def8815-55c0-4e3f-af1d-492e533bae39/cfc10f7c-bed9-4ab1-9535-03f087bb60d3'
+      vstsFeed: '$(feedGuid)'
       projects: '$(projectFileLocation)/*.csproj'
     displayName: 'Restore the project'
 
@@ -40,4 +41,4 @@ steps:
       command: 'push'
       packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
       nuGetFeedType: 'internal'
-      publishVstsFeed: '0def8815-55c0-4e3f-af1d-492e533bae39/cfc10f7c-bed9-4ab1-9535-03f087bb60d3'
+      publishVstsFeed: '$(feedGuid)'
