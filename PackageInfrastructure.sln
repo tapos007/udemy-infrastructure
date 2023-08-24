@@ -5,6 +5,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B8999D05-F84C-429C-AD0D-8E4E7BF08E56}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{476F6A4C-B341-40DC-9C4D-964B9AF9E502}"
+	ProjectSection(SolutionItems) = preProject
+		build\UnitOfWorkRepository.Contract.azure-build-pipelines.yml = build\UnitOfWorkRepository.Contract.azure-build-pipelines.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitOfWorkPackages", "UnitOfWorkPackages", "{421B83B9-6346-4624-8E0F-6AD6F6C18D47}"
 EndProject
