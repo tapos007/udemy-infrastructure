@@ -17,7 +17,7 @@ steps:
     inputs:
       command: 'restore'
       feedsToUse: 'select'
-      vstsFeed: 'd53f0ab0-8ef1-4850-a398-f6005124dcfb'
+      vstsFeed: '0def8815-55c0-4e3f-af1d-492e533bae39/cfc10f7c-bed9-4ab1-9535-03f087bb60d3'
       projects: '$(projectFileLocation)/*.csproj'
     displayName: 'Restore the project'
 
@@ -40,4 +40,4 @@ steps:
       command: 'push'
       packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
       nuGetFeedType: 'internal'
-      publishVstsFeed: 'd53f0ab0-8ef1-4850-a398-f6005124dcfb'
+      publishVstsFeed: '0def8815-55c0-4e3f-af1d-492e533bae39/cfc10f7c-bed9-4ab1-9535-03f087bb60d3'
