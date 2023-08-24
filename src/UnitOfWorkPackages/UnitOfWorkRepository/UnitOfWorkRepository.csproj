@@ -4,6 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>UdemyInfrastructure.UnitOfWorkRepository</AssemblyName>
         <RootNamespace>UdemyInfrastructure.UnitOfWorkRepository</RootNamespace>
+        <Authors>Tapos Ghosh</Authors>
+        <Description>Basic Unit of work</Description>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +15,12 @@
 
     <ItemGroup>
       <ProjectReference Include="..\UnitOfWorkRepository.Contract\UnitOfWorkRepository.Contract.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Directory.Build.props">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>
