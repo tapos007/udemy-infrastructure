@@ -17,10 +17,6 @@
       <ProjectReference Include="..\UnitOfWorkRepository.Contract\UnitOfWorkRepository.Contract.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <None Update="Directory.Build.props">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
+   
 
 </Project>

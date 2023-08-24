@@ -8,10 +8,5 @@
         <Description>Contrast for unit of work pattern</Description>
     </PropertyGroup>
 
-    <ItemGroup>
-      <None Update="Directory.Build.props">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-    </ItemGroup>
-
+    
 </Project>
