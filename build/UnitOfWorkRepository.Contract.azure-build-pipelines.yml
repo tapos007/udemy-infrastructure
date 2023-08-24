@@ -2,6 +2,9 @@ trigger:
   branches:
     include:
       - master
+  paths:
+    include:
+      - src/UnitOfWorkPackages/UnitOfWorkRepository.Contract/*
   batch: True
 
 pool:
@@ -9,7 +12,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  projectFileLocation: 'src/UnitOfWorkPackages\UnitOfWorkRepository.Contract'
+  projectFileLocation: 'src/UnitOfWorkPackages/UnitOfWorkRepository.Contract'
   feedGuid: '0def8815-55c0-4e3f-af1d-492e533bae39/75f55f57-2fac-448f-9e08-303cb4356731'
 
 steps:

@@ -2,7 +2,13 @@ trigger:
   branches:
     include:
       - master
+  paths:
+    include:
+      - src/UnitOfWorkPackages/UnitOfWorkRepository/*
   batch: True
+
+
+
 
 pool:
   name: Default
