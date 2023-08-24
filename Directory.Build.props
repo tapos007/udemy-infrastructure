@@ -6,7 +6,7 @@
     <Choose>
         <When Condition=" '$(BUILD_SOURCEBRANCH)' != 'refs/heads/master' ">
             <PropertyGroup>
-                <VersionSuffix>preview$(BUILD_BUILDID.PadLeft(6, '0'))</VersionSuffix>
+                <VersionSuffix>ci-build$(BUILD_BUILDID.PadLeft(6, '0'))</VersionSuffix>
             </PropertyGroup>
         </When>
     </Choose>
