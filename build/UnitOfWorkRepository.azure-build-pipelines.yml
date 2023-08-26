@@ -1,0 +1,50 @@
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - src/UnitOfWorkPackages/UnitOfWorkRepository/*
+  batch: True
+
+
+
+
+pool:
+  name: Default
+
+variables:
+  buildConfiguration: 'Release'
+  projectFileLocation: 'src/UnitOfWorkPackages/UnitOfWorkRepository'
+  feedGuid: '0def8815-55c0-4e3f-af1d-492e533bae39/75f55f57-2fac-448f-9e08-303cb4356731'
+
+steps:
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'restore'
+      feedsToUse: 'select'
+      vstsFeed: '$(feedGuid)'
+      projects: '$(projectFileLocation)/*.csproj'
+    displayName: 'Restore the project'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'build'
+      arguments: '--configuration $(buildConfiguration)'
+      projects: '$(projectFileLocation)/*.csproj'
+    displayName: 'Build the project'
+
+  - task: NuGetCommand@2
+    inputs:
+      command: 'pack'
+      packagesToPack: '$(projectFileLocation)/*.csproj'
+      versioningScheme: 'off'
+    displayName: 'Packed the Project'
+
+  - task: NuGetCommand@2
+    inputs:
+      command: 'push'
+      packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+      nuGetFeedType: 'internal'
+      publishVstsFeed: '$(feedGuid)'

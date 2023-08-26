@@ -4,6 +4,9 @@
         <TargetFramework>net6.0</TargetFramework>
         <AssemblyName>UdemyInfrastructure.UnitOfWorkRepository.Contract</AssemblyName>
         <RootNamespace>UdemyInfrastructure.UnitOfWorkRepository.Contract</RootNamespace>
+        <Authors>Tapos Ghosh</Authors>
+        <Description>Contrast for unit of work pattern</Description>
     </PropertyGroup>
 
+    
 </Project>

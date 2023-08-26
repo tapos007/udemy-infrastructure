@@ -15,6 +15,7 @@ namespace UdemyInfrastructure.UnitOfWorkRepository.Contract
         
         TDb ConvertDomainEntityToDbEntity(T domainObject);
 
-        IEnumerable<TDb> ConvertDomainEntitiesToDbEntities(IEnumerable<T> domainObjects);
+        IEnumerable<TDb> ConvertDomainEntitiesToDbEntities(IEnumerable<T> domainObjects); 
+        // change something
     }
 }
